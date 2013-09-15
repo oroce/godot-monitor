@@ -1,0 +1,20 @@
+{
+  "name": "godot-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "godot": "~0.6.1",
+    "sendmail": "~0.2.0",
+    "request": "~2.27.0",
+    "nma": "~0.1.4",
+    "winston-syslog": "~0.2.2",
+    "winston": "~0.7.2"
+  }
+}
