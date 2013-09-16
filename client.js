@@ -1,9 +1,9 @@
 /* jshint expr: true*/
 var
-  godot = require( "godot" );
-  Producer = godot.producer.Producer;
-  util = require( "util" );
-  request = require( "request" );
+  godot = require( "godot" ),
+  Producer = godot.producer.Producer,
+  util = require( "util" ),
+  request = require( "request" ),
   HTTPCheck = function( options ){
     options || ( options = {} );
     Producer.apply( this, arguments );

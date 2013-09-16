@@ -22,8 +22,8 @@ var server = godot.createServer({
   type: "udp",
   reactors: [
     godot.reactor()
-      .where( "service", "elviraapi/*/health" )
-      .expire( 1000 * 60 * 6.1 )
+      .where( "service", "elviraapi/*/check" )
+      //.expire( 1000 * 6 * 3 )
       .change( "state" )
       .console()
       .nma({
