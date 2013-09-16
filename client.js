@@ -35,14 +35,14 @@ godot.createClient({
     new HTTPCheck({
       host: "localhost",
       service: "elviraapi/index/check",
-      ttl: 1000*60,
+      ttl: 1000*60*2,
       url: "http://apiv2.oroszi.net/",
       timeout: 2*1000
     }),
     new HTTPCheck({
       host: "localhost",
       service: "elviraapi/bp-szeged/check",
-      ttl: 1000*60*3,
+      ttl: 1000*60*5,
       url: "http://apiv2.oroszi.net/elvira?from=budapest&to=szeged",
       timeout: 1000*20
     })
