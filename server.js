@@ -1,7 +1,7 @@
 var
-  godot = require( "godot" );
-  mailer = require( "./lib/mail" );
-  winston = require( "winston" );
+  godot = require( "godot" ),
+  mailer = require( "./lib/mail" ),
+  winston = require( "winston" ),
   nma = require( "./lib/nma" );
 require( "winston-syslog" );
 godot.reactor.register( "sendmail", mailer );
@@ -43,12 +43,3 @@ server
       logger.info( "Godot server is listening on port %s", server.port  );
     }
   });
-
-/*
-, function( err ){
-  if( err ){
-    return console.error( "Godot monitoring is error: %d", server.address().port );
-  }
-  return console.error( "Godot monitoring is listening on: %d", server.address().port );
-});
-*/
