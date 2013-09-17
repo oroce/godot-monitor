@@ -23,7 +23,7 @@ var server = godot.createServer({
   reactors: [
     godot.reactor()
       .where( "service", "elviraapi/*/check" )
-      //.expire( 1000 * 6 * 3 )
+      .expire( 1000 * 6 * 3 )
       .change( "state" )
       .console()
       .nma({
