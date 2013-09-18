@@ -2,10 +2,13 @@ var
   godot = require( "godot" ),
   mailer = require( "./lib/mail" ),
   winston = require( "winston" ),
+  wait = require( "./lib/wait" ),
   nma = require( "./lib/nma" );
 require( "winston-syslog" );
+
 godot.reactor.register( "sendmail", mailer );
 godot.reactor.register( "nma", nma );
+godot.reactor.register( "wait", wait );
 var logger = new ( winston.Logger )({
   exitOnError: false,
   transports: [
@@ -23,7 +26,7 @@ var server = godot.createServer({
   reactors: [
     godot.reactor()
       .where( "service", "elviraapi/*/check" )
-      .expire( 1000 * 6 * 3 )
+      .wait( 1000 * 60 * 3 )
       .change( "state" )
       .console()
       .nma({
